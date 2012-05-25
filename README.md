@@ -38,8 +38,7 @@ CGFloat avg = [collection reduce:^(NSNumber *a, NSNumber *b) { return [NSNumber 
 // Calls the block for each item in the collection.
 - (void)each:(void(^)(id object))block;
 
-// Calls the block for each item in the collection, collects the return values and ret
-urns them in a new array.
+// Calls the block for each item in the collection, collects the return values and returns them in a new array.
 - (NSArray *)map:(id(^)(id object))block;
 
 // Reduces the array using the block provided.
@@ -50,8 +49,7 @@ urns them in a new array.
 // The block should return YES if the object should be kept.
 - (NSArray *)filter:(BOOL(^)(id object))block;
 
-// Accumulates the array using the provided block and the initial value for the accumu
-lator.
+// Accumulates the array using the provided block and the initial value for the accumulator.
 - (id)inject:(id(^)(id accumulator, id object))block initial:(id)accumulator;
 
 @end
@@ -63,8 +61,7 @@ lator.
 // Calls the block for each item in the collection.
 - (void)each:(void(^)(id key, id object))block;
 
-// Calls the block for each item in the collection, collects the return values and ret
-urns them in a new dictionary.
+// Calls the block for each item in the collection, collects the return values and returns them in a new dictionary.
 - (NSDictionary *)map:(id(^)(id key, id object))block;
 
 // Filters the array using the provided block.
