@@ -26,7 +26,9 @@ CGFloat avg = sum / collection.count;
 To:
 
 ````objc
-CGFloat avg = [collection reduce:^(NSNumber *a, NSNumber *b) { return [NSNumber numberWithInt:(a.intValue + b.intValue)]; }].intValue / collection.count;
+CGFloat avg = [collection reduce:^(NSNumber *a, NSNumber *b) {
+        return @(a.intValue + b.intValue);
+    }].intValue / collection.count;
 ````
 
 
